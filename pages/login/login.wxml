@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<view class='container' wx:if='{{seen}}'>
+  <view class='logo'>
+    <image class='logoIcon' src='../assets/logo.png'></image>
+  </view>
+  <view class='userInfo'>
+    <input id="name" value='{{username}}' bindinput='bindKeyInput' placeholder="账号"/>
+    <input id="pass" value='{{password}}' bindinput='bindKeyInput' placeholder="密码" password='true'/>
+     <view class='switch'>
+      <switch checked='{{checked}}' color='#3a51f9' bindchange="switchChange"/><text class='keep'>记住我</text>
+    </view> 
+    <input class='submit' bindtap='bindViewTap' value='完 成' disabled='true'/> 
+  </view>
+</view> 
+<!-- <view>123</view> -->
+
+

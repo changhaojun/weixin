@@ -1,0 +1,8 @@
+<!--pages/map/map.wxml-->
+<view class='main'>
+  <view>
+    <text>当前地理位置：经度：{{longitude}}，纬度：{{latitude}}</text>
+  </view> 
+  <text>西安</text>
+  <map id='map' longitude="{{longitude}}" latitude="{{latitude}}" scale='12'></map>
+</view>

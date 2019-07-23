@@ -1,0 +1,82 @@
+<!--details.wxml-->
+<view class="container">
+  <!-- <view>
+     <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> 
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text> 
+      </block>
+    </view> 
+     <view class="usermotto">
+      <text class="user-motto">{{nickName}}</text>
+    </view> 
+  </view> 
+  <view class='nav'>
+     <text class='selectedCompany'>{{selectedCompany}}</text>   
+  </view>   -->
+  <view class='companyList' wx:if="{{companysListShow}}">
+    <text class='tip'>请选择要查看的公司</text>
+    <view class='currentCompany'>
+      <span></span>
+      <p id="{{currentCompanyId}}" data-name='{{currentCompany}}' bindtap='selectedCompany'>{{currentCompany}}</p>
+    </view>
+    <view class='item' wx:for="{{companyList}}">
+      <span></span>
+      <p id="{{item.company_id}}" data-name='{{item.company_name}}' bindtap='selectedCompany'>{{item.company_name}}</p>
+    </view> 
+  </view>
+  <view class="section"> 
+    <view class='switch' wx:if='{{switchIconShow}}'>
+      <image class='listIcon' src='../assets/list_icon.png' bindtap='switchCompany'></image>
+    </view>
+    <view class='exit' bindtap='exit'>退出</view>
+    <view>
+      <text>统计区间：</text>
+      <picker mode="date" value="{{date}}" fields="month" bindchange="bindDateChange">  
+        <view class="picker">  
+          <span>{{dataTime}}</span>
+        </view>  
+      </picker>
+    </view>    
+  </view>
+  <view class="onlineNum">  
+    统计区间有<text> {{onlineNum}} </text>个换热站
+  </view>
+  <view>
+    <view class='main'>
+      <view class='interval'></view>
+      <view class='indic'>
+        <image class='indicIcon' src='../assets/zhibiao_icon.png'></image><text class='title'>关键指标</text>
+      </view>
+      <view wx:for="{{items}}" class='doto'>
+        <view class='fortem'>{{item.title}}</view>
+        <canvas canvas-id='{{item.container_id}}' class="canvas"></canvas >
+      </view>
+    </view>
+  </view> 
+  <view style="display: flex; padding-bottom: 30rpx;">
+    <button  id='api' bindtap='apiFunction' size="mini" style='display: inline-block;'>API</button>
+    <button id='line' bindtap='showChart' size="mini" style='display: inline-block'>图表</button>
+    <button id='line' bindtap='showMap' size="mini" style='display: inline-block'>地图</button>   
+  </view> 
+</view>
+
+
+
+  
+
+
+
+
+<!-- <template name='companyList1'>
+  <view>
+    <text>请选择要查看的公司</text>
+    <view>123</view>
+     <view>
+      <text wx:for="{{companyList}}">
+        {{item.company_name}}
+      </text>   
+    </view> 
+  </view>
+</template> -->

@@ -1,0 +1,7 @@
+<!--pages/api/api.wxml-->
+<view style='padding:30rpx;'>
+  <text style='margin-bottom:30rpx;display:inline-block;'>api功能</text>
+  <text bindtap='scan' style='float:right; color:green; font-size:30rpx;'>扫一扫</text>
+</view>
+
+

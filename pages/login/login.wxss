@@ -1,0 +1,49 @@
+/* pages/index/index.wxss */
+page{
+  background: #eee; 
+}
+.logo{
+  text-align: center;
+  margin: 160rpx 0 100rpx 0;
+}
+.logoIcon{
+  width: 512rpx;
+  height: 92rpx;
+}
+.userInfo{
+  width: 80%;
+  margin: 0 auto;
+}
+#name,#pass{
+  padding: 40rpx 0 4rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+.switch{
+  margin-top: 60rpx
+}
+.wx-switch-input{
+  width:70rpx !important;
+  height:30rpx !important;
+}
+.wx-switch-input::before{
+  width:67rpx !important;
+  height: 26rpx !important;
+}
+
+.wx-switch-input::after{
+  width: 30rpx !important;
+  height: 26rpx !important;
+}  
+.keep{
+  margin-left: 10rpx;
+}
+.submit{
+  text-align: center;
+  background: #3a51f9;
+  color: white;
+  margin-top: 70rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+}
